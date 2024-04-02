@@ -35,8 +35,10 @@ while True:
         print("Invalid input. Please enter a valid number.")
 
 if in1 == 1:
+    default_path = os.path.expanduser("~/Pictures/Grayscale")
+    os.makedirs(default_path, exist_ok=True)  # Create the directory if it doesn't exist
     in3 = input("Please enter an image name: ")
-    cv2.imwrite(in3 + '.jpg', img)  # Save as JPEG
-
+    cv2.imwrite(os.path.join(default_path, in3 + '.jpg'), img)
+    print("Saved in default path: " + default_path)
 elif in1 == 2:
     sys.exit()
