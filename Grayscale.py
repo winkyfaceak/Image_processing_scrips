@@ -26,17 +26,17 @@ for i in range(row):
 print("Do you wish to save the image?")
 while True:
     try:
-        in2 = int(input("1 to save, 2 for no: "))  # Convert input to integer
-        if in2 == 1 or in2 == 2:
+        in1 = int(input("1 to save, 2 for no: "))  # Convert input to integer
+        if in1 == 1 or in1 == 2:
             break
         else:
             print("Invalid input. Please enter either 1 or 2.")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
-if in2 == 1:
+if in1 == 1:
     in3 = input("Please enter an image name: ")
     cv2.imwrite(in3 + '.jpg', img)  # Save as JPEG
 
-elif in2 == 2:
+elif in1 == 2:
     sys.exit()
