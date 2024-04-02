@@ -1,4 +1,6 @@
 # Import opencv
+import sys
+
 import cv2
 
 print("Please enter the file location of the image to convert to grayscale!")
@@ -24,5 +26,4 @@ if in2 == 1:
     cv2.imwrite(in3 + '.jpg', img)  # Save as JPEG
 
 elif in2 == 2:
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    sys.exit()
