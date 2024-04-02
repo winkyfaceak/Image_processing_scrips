@@ -1,10 +1,14 @@
-# Import opencv
 import sys
-
+import os
 import cv2
 
 print("Please enter the file location of the image to convert to grayscale!")
-image_location = input("The location: ")
+while True:
+    image_location = input("The location: ")
+    if os.path.isfile(image_location):
+        break
+    else:
+        print("Invalid file location. Please try again.")
 
 # Load the input image
 img = cv2.imread(image_location)
